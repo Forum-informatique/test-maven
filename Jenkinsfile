@@ -11,7 +11,7 @@ def img = stage('Build'){
 docker.build("$IMAGE", '.')
 }
 stage ('Run'){
-img.withRun("--name run-$BUILD_ID -p 8081:8080) { c->
+img.withRun("--name run-$BUILD_ID -p 8081:8080") { c->
 sh 'docker ps'
 sh 'netstat -ntplu'
 sh 'sleep 30s'
