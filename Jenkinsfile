@@ -1,5 +1,5 @@
 node{
-def registryProjet='registry.gitlab.com/Forum-informatique/test-build'
+def registryProjet='registry.gitlab.com/forum-informatique/test-build'
 def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
 stage('clone'){
 git 'https://github.com/Forum-informatique/test-maven'
